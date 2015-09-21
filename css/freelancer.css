@@ -404,6 +404,12 @@ footer .footer-below {
     font-size: 3em;
 }
 
+@media screen and (max-width: 767px) {
+    .portfolio-modal .modal-content h2 {
+        font-size: 2em;
+    }
+}
+
 .portfolio-modal .modal-content img {
     margin-bottom: 0px;
 }
