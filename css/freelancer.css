@@ -4,13 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+html,body {
     overflow-x: hidden;
-}
-
-body.modal-open {
-    overflow: hidden;
-    position:fixed;
 }
 
 p {
