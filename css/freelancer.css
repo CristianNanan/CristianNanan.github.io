@@ -452,7 +452,3 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
-
-img {
-    image-rendering: -moz-crisp-edges;
-}
