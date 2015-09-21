@@ -6064,6 +6064,8 @@ button.close {
 }
 .carousel {
   position: relative;
+  max-width: 730px;
+  margin: auto auto 20px auto;
 }
 .carousel-inner {
   position: relative;
