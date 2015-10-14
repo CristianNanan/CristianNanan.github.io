@@ -463,6 +463,26 @@ function goAway(){
  );
 }
 
+$(window).resize(function(){
+
+$("svg").each(
+ function(){
+  var height = $(this).css("height");
+  var width = $(this).css("width");
+  $(this).css("height", width);
+ }
+);
+
+});
+
+$("svg").each(
+ function(){
+  var height = $(this).css("height");
+  var width = $(this).css("width");
+  $(this).css("height", width);
+ }
+);
+
 </script>
 
 
