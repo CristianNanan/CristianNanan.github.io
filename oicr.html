@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>OICR</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<style>
+
+text {
+ font-family: sans-serif;
+}
+
+.hex {
+ fill:#fff;
+ stroke: #bbb;
+ stroke-width: 3px;
+ animation: flood 2s;
+}
+
+@keyframes flood {
+ from {opacity: 0.1;}
+  to {opacity: 1;}
+}
+
+#four .c .hex, #four .d .hex, #three .d .hex {
+ fill: #355470;
+}
+
+#four .c text, #four .d text, #three .d text {
+ fill: #7cbdf7;
+ font-weight: bold;
+}
+
+#four .c.text {
+ transform: rotate(-45deg);
+}
+
+#four .d.text {
+ transform: rotate(45deg);
+}
+
+#three .d.text {
+ transform: rotate(-90deg);
+}
+
+#two .c .hex, #two .d .hex {
+ fill: #f8fda3;
+}
+
+#two .b text, #two .c text, #two .d text, #two .e text, #one .b text, #one .c text, #one .d text, #one .e text {
+ fill: #355470;
+ font-weight: bold;
+}
+
+#four .b .hex, #five .c .hex {
+ fill: #84ca58;
+}
+
+#four .b text, #five .c text {
+ fill: #fff;
+ font-weight: bold;
+}
+
+#four .e .hex, #five .e .hex {
+ fill: #f89329;
+}
+
+#four .e text, #five .e text {
+ fill: #fff;
+ font-weight: bold;
+}
+
+#three .f text, #four .f text, #five .f text, #six .d text, #six .e text {
+ fill: #f89329;
+ font-weight: bold;
+}
+ 
+
+span, .shape, .text {
+ width: 96px;
+}
+
+span {
+ position: relative;
+}
+
+.text {
+ position: absolute;
+ left: 0px;
+}
+
+text {
+ text-anchor: middle;
+}
+
+.even, .odd {
+ height: 100px;
+ margin-bottom: -22px;
+ width: 1200px;
+}
+
+.even {
+ margin-left: 50px;
+}
+
+.container {
+ width: 1250px;
+ margin: auto;
+ position: relative;
+}
+
+.blurb {
+ width: 252px;
+ font-family: sans-serif;
+ font-size: 14px;
+ padding: 10px;
+ position: absolute;
+ top: 400px;
+ right: 100px;
+ background-color: white;
+ color: #333;
+}
+
+@media screen and (max-width: 1250px) {
+ .k, .l {
+  display: none;
+ }
+
+ .even, .odd {
+  width: 1000px;
+ }
+
+ .container {
+  width: 1050px;
+ }
+
+}
+
+@media screen and (max-width: 1050px) {
+ .i, .j {
+  display: none;
+ }
+
+ .even, .odd {
+  width: 800px;
+ }
+
+ .container {
+  width: 850px;
+ }
+
+ .blurb {
+ position: static;
+ margin: 20px auto;
+ }
+
+}
+
+@media screen and (max-width: 850px) {
+ .g, .h {
+  display: none;
+ }
+
+ .even, .odd {
+  width: 600px;
+ }
+
+ .container {
+  width: 650px;
+ }
+
+}
+
+@media screen and (max-width: 700px) {
+ .even, .odd {
+  width: 100%;
+  margin-bottom: -4%;
+  height: auto;
+ }
+
+.even {
+ margin-left: 8%;
+}
+
+ .container {
+  width: 100%;
+  max-width: 650px;
+ }
+
+ .shape {
+  width: 15%;
+ }
+
+ .text {
+  width: 95%;
+ }
+
+ body {
+  overflow-x: hidden;
+  padding-right: 4%;
+ }
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="zero" class="even">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="one" class="odd">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">USER</tspan><tspan x="50%" dy="1em">MANAGMENT</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">COMMUNICATE</tspan><tspan x="50%" dy="1em">ONLINE</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">CHANGE</tspan><tspan x="50%" dy="1em">MANAGMENT</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-20">REUSABLE</tspan><tspan x="50%" dy="1em">SYSTEMS</tspan><tspan x="50%" dy="1em">BLUEPRINT</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="two" class="even">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10">TECHNOLOGY</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">LEARNING</tspan><tspan x="50%" dy="1em">MODELS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">COMMON</tspan><tspan x="50%" dy="1em">PROBLEMS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">REUSABLE</tspan><tspan x="50%" dy="1em">SOLUTIONS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">REUSABLE</tspan><tspan x="50%" dy="1em">CODE</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="three" class="odd">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">NO</tspan><tspan x="50%" dy="1em">CONTENT</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">SHARED</tspan><tspan x="50%" dy="1em">PROBLEMS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10" textLength="120">CONNECT</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">SHARED</tspan><tspan x="50%" dy="1em">PUBLIC</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10">POLICY</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="four" class="even">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">USER</tspan><tspan x="50%" dy="1em">ROLES</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">PROJECT</tspan><tspan x="50%" dy="1em">STAKEHOLDERS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10">CONNECT</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10">CONNECT</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-20">WORLD</tspan><tspan x="50%" dy="1em">RENOWNED</tspan><tspan x="50%" dy="1em">SCIENTISTS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10">DIVERSE</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="five" class="odd">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">SPECIALIZED</tspan><tspan x="50%" dy="1em">EXPERTISE</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">UNIQUE</tspan><tspan x="50%" dy="1em">PROBLEMS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">PROJECT</tspan><tspan x="50%" dy="1em">GOALS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10">INSTITUTION</text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">GROWING</tspan><tspan x="50%" dy="1em">TALENT</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="six" class="even">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">USER</tspan><tspan x="50%" dy="1em">TRAINING</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">GLOBAL</tspan><tspan x="50%" dy="1em">GOALS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">PEER</tspan><tspan x="50%" dy="1em">NETWORK</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"><tspan x="50%" dy="-5">GLOBAL</tspan><tspan x="50%" dy="1em">TEAMS</tspan></text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div id="seven" class="odd">
+ <span>
+  <svg class="a shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="a text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="b shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="b text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="c shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="c text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="d shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="d text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="e shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="e text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="f shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="f text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="g shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="g text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="h shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="h text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="i shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="i text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="j shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="j text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="k shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="k text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+ <span>
+  <svg class="l shape" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <polygon class="hex" points="100,0 200,50 200,150 100,200 0,150 0,50"></polygon>
+  </svg>
+  <svg class="l text" viewBox="0 0 200 200" preserveAspectRatio="xMidYMin meet">
+   <text x="50%" y="50%" font-size="22" dy="10"> </text>
+  </svg>
+ </span>
+</div>
+
+<div class="blurb"><img src="http://i.imgur.com/hztinj3.png" width="18" height="18" alt="Honeycomb"> <b style="color:#355470">webdev@oicr.on.ca</b><br>Your <i>internal</i> partner<br>working on <i>your</i> group goals<br>to <i><b style="color:#7cbdf7;">connect</b></i> to a global, Internet-facing<br>community by developing<br>sustainable, <i>reusable</i>, open technology.</div>
+
+</div>
+
+<script type="text/javascript">
+
+$("text").each(
+ function(){
+  var fill = $(this).text();
+  if (fill != " ") {
+   $(this).parent().parent().hover(
+    function(){
+     goAway();
+    },
+    function(){
+     $("text").parent().parent().css("visibility", "visible");
+    }
+   );
+  }
+ }
+);
+
+function goAway(){
+
+ $("text").each(
+  function(){
+   var fill = $(this).text();
+   if (fill == " ") {
+    $(this).parent().parent().css("visibility","hidden");
+   }
+  }
+ );
+}
+
+$(window).resize(function(){
+
+$("svg").each(
+ function(){
+  var height = $(this).css("height");
+  var width = $(this).css("width");
+  $(this).css("height", width);
+ }
+);
+
+});
+
+$("svg").each(
+ function(){
+  var height = $(this).css("height");
+  var width = $(this).css("width");
+  $(this).css("height", width);
+ }
+);
+
+</script>
+
+
+</body>
+
+</html>
